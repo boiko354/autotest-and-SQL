@@ -10,9 +10,4 @@ def test_track_order():
 
     response_of_track_order = sender_stand_request.get_info_of_order(track_number)
 
-    if response_of_track_order.status_code == 200:
-        print("Тест успешно пройден!")
-    else:
-        print("Тест провален :(")
-
-
+    assert response_of_track_order.status_code == 200, "Тест успешно пройден"
